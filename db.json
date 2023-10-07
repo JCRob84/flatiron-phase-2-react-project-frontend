@@ -1,0 +1,7 @@
+{
+  "exercises": [
+    { "id": 1, "name": "Push-ups", "duration": 60 },
+    { "id": 2, "name": "Sit-ups", "duration": 45 },
+    { "id": 3, "name": "Jumping Jacks", "duration": 30 }
+  ]
+}

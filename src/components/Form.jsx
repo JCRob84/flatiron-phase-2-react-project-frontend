@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function Form({ addExercise }) {
   const [name, setName] = useState("");
   const [duration, setDuration] = useState("");
+  // const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();

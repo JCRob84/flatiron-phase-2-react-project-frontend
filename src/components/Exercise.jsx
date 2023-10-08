@@ -8,9 +8,6 @@ const Exercise = () => {
         <nav>
           <ul>
             <li>
-              <a href="#top">Go to top</a>
-            </li>
-            <li>
               <a href="#" target="_blank">
                 Aerobic exercise
               </a>
@@ -28,7 +25,7 @@ const Exercise = () => {
                 Flexibility exercises
               </a>
               <p>
-                lexibility exercises, also known as range of motion or
+                Flexibility exercises, also known as range of motion or
                 stretching exercises, improve muscle elasticity and joint range
                 of motion. You can expect to feel a comfortable tension when
                 doing flexibility exercises, but never pain. Having good

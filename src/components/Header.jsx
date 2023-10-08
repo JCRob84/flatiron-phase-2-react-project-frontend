@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import "./Header.css";
 
 const Header = () => {
   const handleButtonClick = (section) => {
@@ -10,7 +11,7 @@ const Header = () => {
     <header>
       <h1>Exercise Tracker</h1>
       <nav>
-        <div class="w3-bar w3-black">
+        <div className="w3-bar w3-black">
           <Link className="w3-bar-item w3-button" to="/">
             Home
           </Link>

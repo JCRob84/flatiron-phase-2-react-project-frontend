@@ -22,15 +22,13 @@ const ExerciseManager = () => {
   function addExercise(newExercise) {
     setExercises((prevExercises) => [...prevExercises, newExercise]);
     setConfirmationMessage("Exercise added successfully!");
-    // Limpia el mensaje de confirmación después de unos segundos
+
     setTimeout(() => {
       setConfirmationMessage("");
-    }, 3000); // Mostrar el mensaje durante 3 segundos
+    }, 3000);
   }
 
   function handleDeleteExercise(exerciseId) {
-    // Realiza una solicitud para eliminar el ejercicio en el servidor
-    // Por ejemplo, puedes hacer algo como esto:
     fetch(`http://localhost:3000/exercises/${exerciseId}`, {
       method: "DELETE",
     })
@@ -38,14 +36,13 @@ const ExerciseManager = () => {
         if (!res.ok) {
           throw new Error("Failed to delete exercise.");
         }
-        // Elimina el ejercicio de la lista en el estado local
+
         setExercises((prevExercises) =>
           prevExercises.filter((exercise) => exercise.id !== exerciseId)
         );
       })
       .catch((error) => {
         console.error(error);
-        // Puedes mostrar un mensaje de error o realizar acciones adicionales aquí
       });
   }
 

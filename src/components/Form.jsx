@@ -6,6 +6,16 @@ function Form({ addExercise }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!name.trim()) {
+      alert("Please enter a valid exercise name.");
+      return;
+    }
+
+    if (!duration || isNaN(duration) || duration <= 0) {
+      alert("Please enter a valid exercise duration.");
+    }
+
     const configObj = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -13,11 +23,22 @@ function Form({ addExercise }) {
     };
 
     fetch("http://localhost:3000/exercises", configObj)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Request failed.");
+        }
+        return res.json();
+      })
       .then((data) => {
         addExercise(data);
         setName("");
         setDuration("");
+      })
+      .catch((error) => {
+        alert(
+          "There was a problem adding the exercise. Please try again later."
+        );
+        console.error(error);
       });
   };
 

@@ -2,17 +2,17 @@ const Header = () => {
   return (
     <>
       <header>
-        <h1>My App</h1>
+        <h1>Exercise Tracker</h1>
         <nav>
           <ul>
             <li>
-              <a href="some-id1">Link Title 1</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="some-id2">Link Title 2</a>
+              <a href="#exercises">Exercises</a>
             </li>
             <li>
-              <a href="some-id3">Link Title 3</a>
+              <a href="#add-exercise">Add Exercise</a>
             </li>
           </ul>
         </nav>

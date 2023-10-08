@@ -1,3 +1,5 @@
+import React from "react";
+// import { Link } from "react-router-dom";
 import Header from "./Header";
 
 const Home = () => {
@@ -15,7 +17,7 @@ const Home = () => {
           </p>
         </section>
         <section>
-          <h3>Strenght Training</h3>
+          <h3>Strength Training</h3>
           <p>
             Strength training exercises help build muscle, improve posture, and
             enhance overall strength and balance.

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import "./App.css";
 
 import Home from "./components/Home";
-import Header from "./components/Header";
+
 import Exercise from "./components/Exercise";
 import ExerciseManager from "./components/ExerciseManager";
 

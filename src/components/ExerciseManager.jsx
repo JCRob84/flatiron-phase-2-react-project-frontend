@@ -1,16 +1,13 @@
 import Header from "./Header";
 import Form from "./Form";
 import { useState, useEffect } from "react";
+import "./ExerciseManager.css";
 
 const ExerciseManager = () => {
-  const [exercises, setExercises] = useState({
-    aerobicExercises: [],
-    strengthTrainingExercises: [],
-    flexibilityExercises: [],
-  });
+  const [exercises, setExercises] = useState([]);
   const [confirmationMessage, setConfirmationMessage] = useState("");
   useEffect(() => {
-    fetch("http://localhost:3031/exercises")
+    fetch("http://localhost:3031/aerobicExercises")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Request failed.");
@@ -35,7 +32,7 @@ const ExerciseManager = () => {
   }
 
   function handleDeleteExercise(exerciseId) {
-    fetch(`http://localhost:3031/exercises/${exerciseId}`, {
+    fetch(`http://localhost:3031/aerobicExercises/${exerciseId}`, {
       method: "DELETE",
     })
       .then((res) => {
@@ -61,30 +58,9 @@ const ExerciseManager = () => {
         <p className="confirmation-message">{confirmationMessage}</p>
       )}
       <ul>
-        {exercises.aerobicExercises.map((exercise) => (
+        {exercises.map((exercise) => (
           <li key={exercise.id}>
-            {exercise.name} (Duration: {exercise.duration} seconds)
-            <button onClick={() => handleDeleteExercise(exercise.id)}>
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
-      <ul>
-        {exercises.strengthTrainingExercises.map((exercise) => (
-          <li key={exercise.id}>
-            {exercise.name} (Repetitions: {exercise.repetitions}, Sets:{" "}
-            {exercise.sets} )
-            <button onClick={() => handleDeleteExercise(exercise.id)}>
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
-      <ul>
-        {exercises.flexibilityExercises.map((exercise) => (
-          <li key={exercise.id}>
-            {exercise.name} (Type: {exercise.type})
+            {exercise.name} (Duration: {exercise.duration} minutes)
             <button onClick={() => handleDeleteExercise(exercise.id)}>
               Delete
             </button>

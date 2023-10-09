@@ -1,36 +1,153 @@
 {
-  "exercises": {
-    "aerobicExercises": [
-      {
-        "id": 1,
-        "name": "Running",
-        "duration": 30
-      },
-      {
-        "id": 2,
-        "name": "Cycling",
-        "duration": 45
-      }
-    ],
-    "strengthTrainingExercises": [
-      {
-        "id": 4,
-        "name": "Squats",
-        "repetitions": 12,
-        "sets": 4
-      }
-    ],
-    "flexibilityExercises": [
-      {
-        "id": 5,
-        "name": "Yoga",
-        "type": "Hatha"
-      },
-      {
-        "id": 6,
-        "name": "Stretching",
-        "type": "Static"
-      }
-    ]
-  }
+  "aerobicExercises": [
+    {
+      "id": 1,
+      "name": "Running",
+      "duration": 30
+    },
+    {
+      "id": 3,
+      "name": "Jumping Jacks",
+      "duration": 15
+    },
+    {
+      "id": 6,
+      "name": "Rowing",
+      "duration": 40
+    },
+    {
+      "id": 7,
+      "name": "Dancing",
+      "duration": 50
+    },
+    {
+      "id": 8,
+      "name": "Jump Rope",
+      "duration": 20
+    },
+    {
+      "id": 9,
+      "name": "Kickboxing",
+      "duration": 45
+    },
+    {
+      "id": 10,
+      "name": "Elliptical Trainer",
+      "duration": 30
+    }
+  ],
+  "strengthTrainingExercises": [
+    {
+      "id": 11,
+      "name": "Squats",
+      "repetitions": 12,
+      "sets": 4
+    },
+    {
+      "id": 12,
+      "name": "Push-Ups",
+      "repetitions": 15,
+      "sets": 3
+    },
+    {
+      "id": 13,
+      "name": "Bench Press",
+      "repetitions": 10,
+      "sets": 4
+    },
+    {
+      "id": 14,
+      "name": "Deadlifts",
+      "repetitions": 8,
+      "sets": 3
+    },
+    {
+      "id": 15,
+      "name": "Dumbbell Rows",
+      "repetitions": 12,
+      "sets": 3
+    },
+    {
+      "id": 16,
+      "name": "Planks",
+      "repetitions": null,
+      "sets": 3
+    },
+    {
+      "id": 17,
+      "name": "Leg Press",
+      "repetitions": 12,
+      "sets": 4
+    },
+    {
+      "id": 18,
+      "name": "Pull-Ups",
+      "repetitions": 8,
+      "sets": 3
+    },
+    {
+      "id": 19,
+      "name": "Lunges",
+      "repetitions": 10,
+      "sets": 3
+    },
+    {
+      "id": 20,
+      "name": "Hammer Curls",
+      "repetitions": 12,
+      "sets": 3
+    }
+  ],
+  "flexibilityExercises": [
+    {
+      "id": 21,
+      "name": "Pilates",
+      "type": "Matwork"
+    },
+    {
+      "id": 22,
+      "name": "Tai Chi",
+      "type": "Meditative"
+    },
+    {
+      "id": 23,
+      "name": "Dynamic Stretching",
+      "type": "Dynamic"
+    },
+    {
+      "id": 24,
+      "name": "Foam Rolling",
+      "type": "Self-Myofascial Release"
+    },
+    {
+      "id": 25,
+      "name": "Deep Breathing",
+      "type": "Breathing"
+    },
+    {
+      "id": 26,
+      "name": "Yin Yoga",
+      "type": "Yoga"
+    },
+    {
+      "id": 27,
+      "name": "Pike Stretch",
+      "type": "Static"
+    },
+    {
+      "id": 28,
+      "name": "Child's Pose",
+      "type": "Yoga"
+    },
+    {
+      "id": 29,
+      "name": "Seated Forward Bend",
+      "type": "Static"
+    },
+    {
+      "id": 30,
+      "name": "Neck Rolls",
+      "type": "Stretching"
+    }
+  ]
 }

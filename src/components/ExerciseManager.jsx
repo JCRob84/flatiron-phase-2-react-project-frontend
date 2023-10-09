@@ -3,17 +3,23 @@ import Form from "./Form";
 import { useState, useEffect } from "react";
 
 const ExerciseManager = () => {
-  const [exercises, setExercises] = useState([]);
+  const [exercises, setExercises] = useState({
+    aerobicExercises: [],
+    strengthTrainingExercises: [],
+    flexibilityExercises: [],
+  });
   const [confirmationMessage, setConfirmationMessage] = useState("");
   useEffect(() => {
-    fetch("http://localhost:3000/exercises")
+    fetch("http://localhost:3031/exercises")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Request failed.");
         }
         return res.json();
       })
-      .then((data) => setExercises(data))
+      .then((data) => {
+        setExercises(data);
+      })
       .catch((error) => {
         console.error(error);
       });
@@ -29,7 +35,7 @@ const ExerciseManager = () => {
   }
 
   function handleDeleteExercise(exerciseId) {
-    fetch(`http://localhost:3000/exercises/${exerciseId}`, {
+    fetch(`http://localhost:3031/exercises/${exerciseId}`, {
       method: "DELETE",
     })
       .then((res) => {
@@ -55,9 +61,30 @@ const ExerciseManager = () => {
         <p className="confirmation-message">{confirmationMessage}</p>
       )}
       <ul>
-        {exercises.map((exercise) => (
+        {exercises.aerobicExercises.map((exercise) => (
           <li key={exercise.id}>
             {exercise.name} (Duration: {exercise.duration} seconds)
+            <button onClick={() => handleDeleteExercise(exercise.id)}>
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {exercises.strengthTrainingExercises.map((exercise) => (
+          <li key={exercise.id}>
+            {exercise.name} (Repetitions: {exercise.repetitions}, Sets:{" "}
+            {exercise.sets} )
+            <button onClick={() => handleDeleteExercise(exercise.id)}>
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {exercises.flexibilityExercises.map((exercise) => (
+          <li key={exercise.id}>
+            {exercise.name} (Type: {exercise.type})
             <button onClick={() => handleDeleteExercise(exercise.id)}>
               Delete
             </button>

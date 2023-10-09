@@ -12,13 +12,16 @@ const Header = () => {
       <h1>Exercise Tracker</h1>
       <nav>
         <div className="w3-bar w3-black">
-          <Link className="w3-bar-item w3-button" to="/">
+          <Link className="w3-bar-item w3-button header-link" to="/">
             Home
           </Link>
-          <Link className="w3-bar-item w3-button" to="/exercise">
+          <Link className="w3-bar-item w3-button header-link" to="/exercise">
             Exercises
           </Link>
-          <Link className="w3-bar-item w3-button" to="/excerciseManager">
+          <Link
+            className="w3-bar-item w3-button header-link"
+            to="/excerciseManager"
+          >
             Add Exercise
           </Link>
         </div>

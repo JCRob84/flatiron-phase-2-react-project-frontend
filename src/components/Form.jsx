@@ -17,13 +17,16 @@ function Form({ addExercise }) {
       alert("Please enter a valid exercise duration.");
     }
 
-    const configObj = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, duration }),
+    const exerciseData = {
+      name,
+      duration: parseFloat(duration),
     };
 
-    fetch("http://localhost:3000/exercises", configObj)
+    const configObj = {
+      method: "GET",
+    };
+
+    fetch("http://localhost:3031/aerobicExercises", configObj)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Request failed.");
@@ -53,7 +56,7 @@ function Form({ addExercise }) {
       />
       <input
         type="number"
-        placeholder="Duration (seconds)"
+        placeholder="Duration (minutes)"
         value={duration}
         onChange={(e) => setDuration(e.target.value)}
       />

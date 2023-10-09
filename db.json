@@ -1,40 +1,36 @@
 {
-  "aerobicExercises": [
-    {
-      "id": 1,
-      "name": "Running",
-      "duration": 30
-    },
-    {
-      "id": 2,
-      "name": "Cycling",
-      "duration": 45
-    }
-  ],
-  "strengthTrainingExercises": [
-    {
-      "id": 3,
-      "name": "Push-ups",
-      "repetitions": 15,
-      "sets": 3
-    },
-    {
-      "id": 4,
-      "name": "Squats",
-      "repetitions": 12,
-      "sets": 4
-    }
-  ],
-  "flexibilityExercises": [
-    {
-      "id": 5,
-      "name": "Yoga",
-      "type": "Hatha"
-    },
-    {
-      "id": 6,
-      "name": "Stretching",
-      "type": "Static"
-    }
-  ]
+  "exercises": {
+    "aerobicExercises": [
+      {
+        "id": 1,
+        "name": "Running",
+        "duration": 30
+      },
+      {
+        "id": 2,
+        "name": "Cycling",
+        "duration": 45
+      }
+    ],
+    "strengthTrainingExercises": [
+      {
+        "id": 4,
+        "name": "Squats",
+        "repetitions": 12,
+        "sets": 4
+      }
+    ],
+    "flexibilityExercises": [
+      {
+        "id": 5,
+        "name": "Yoga",
+        "type": "Hatha"
+      },
+      {
+        "id": 6,
+        "name": "Stretching",
+        "type": "Static"
+      }
+    ]
+  }
 }
